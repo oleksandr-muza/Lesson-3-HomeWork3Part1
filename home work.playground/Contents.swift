@@ -17,10 +17,15 @@ import Foundation
  */
 
 // Псевдонім для зберігання деталей товару
-typealias ProductInfo = (String, Double, String, String, String)
+typealias ProductInfo = (productName: String,
+                         price: Double,
+                         currency: String,
+                         socet: String,
+                         processor: String)
 
 // Користувач в інтернет-магазині додав наступні товари у кошик,
 // але ще не визначився, яку саме відеократу придбати:
+
 let cart: [ProductInfo] = [
     (productName: "ASRock H310CV-HDV", price: 1717.0, currency: "₴", socet: "s1151", processor: "Intel"),
     (productName: "Asus Prime H310M-E R2.0", price: 2299.0, currency: "₴", socet: "s1151", processor: "Intel"),
@@ -55,8 +60,12 @@ let cart: [ProductInfo] = [
     ------------------------------------------------------
  */
 
-
-
+for i in 0..<14 {
+    print("-------------------------\(i+1)-------------------------")
+    print("Назва товару: \(cart[i].productName), Ціна: \(cart[i].price) ₴")
+    print("Сокет: \(cart[i].socet), Процессор: \(cart[i].processor)")
+}
+print("----------------------------------------------------")
 
 
 /*
