@@ -182,8 +182,18 @@ print("---------------------------------------------------")
     ------------------------------------------------------
  */
 
-
-
+for index in 0..<cart.count {
+    
+    let priceLimit = 5000.00
+    let reqSocet = "s1151"
+    
+    if cart[index].price < priceLimit && cart[index].socet == reqSocet {
+        print("---------------------\(index+1)---------------------")
+        print("Назва товару: \(cart[index].productName), Ціна: \(cart[index].price) ₴")
+        print("Сокет: \(cart[index].socet)")
+    }
+}
+print("--------------------------------------------")
 
 
 /*
