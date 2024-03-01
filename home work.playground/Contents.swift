@@ -240,6 +240,23 @@ print("--------------------------------------------")
     
  */
 
+for index in 0..<cart.count {
+    
+    let processorBrand = cart[index].processor
+
+    switch processorBrand {
+    case "Intel":
+        print("-------------------\(index+1)---------------")
+        print("Назва товару: \(cart[index].productName), Ціна: \(cart[index].price) ₴")
+    case "AMD":
+        print("-------------------\(index+1)-------------------")
+        print("Назва товару: \(cart[index].productName), Ціна: \(cart[index].price) ₴")
+    default:
+        print("Oops!")
+    }
+    
+}
+
 
 
 /*
