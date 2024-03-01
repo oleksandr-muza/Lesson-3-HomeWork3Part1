@@ -443,8 +443,14 @@ print(processorType)
  
  */
 
+enum Currency: String {
+    case uah = "UAH"
+    case usd = "USD"
+    case eur = "EUR"
+}
 
-
+var europeCurrency: Currency = .eur
+print(europeCurrency)
 
 
 /*
