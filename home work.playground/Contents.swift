@@ -474,7 +474,7 @@ print(europeCurrency)
 
 struct MotherBoard {
     var socet: String = ""
-    var processor: ProcessorType = .amd
+    var processor = ProcessorType(rawValue: "")
 }
 
 var newItem = MotherBoard()
@@ -498,7 +498,14 @@ print(newItem.socet)
  
  */
 
+class Product {
+    var name: String = ""
+    var price: Double = 0.0
+    var currency = Currency(rawValue: "")
+    var motherBoard = MotherBoard()
+    
+}
 
-
-
-
+var newProduct: Product = Product()
+newProduct.name = "Asus TUF Gaming"
+print(newProduct.name)
