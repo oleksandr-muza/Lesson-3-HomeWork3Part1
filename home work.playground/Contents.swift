@@ -338,8 +338,17 @@ onlyIntel()
  */
 
 
+func filteredItemsByPrice(maxPrice: Double) {
+    print("--Товари з ціною менше \(maxPrice)------------")
+    for index in 0..<cart.count {
+        if cart[index].price < maxPrice {
+            print("\(index+1) Назва товару: \(cart[index].productName), Ціна: \(cart[index].price) \(cart[index].currency)")
+        }
+    }
+    print("-----------------------------")
+}
 
-
+filteredItemsByPrice(maxPrice: 4500)
 
 
 /*
