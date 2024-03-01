@@ -422,9 +422,13 @@ mostExpensiveItem(processor: "Intel")
  */
 
 
+enum ProcessorType: String {
+    case intel = "Intel"
+    case amd = "AMD"
+}
 
-
-
+var processorType: ProcessorType = .intel
+print(processorType)
 
 /*
  
