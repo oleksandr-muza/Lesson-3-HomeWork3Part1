@@ -472,9 +472,15 @@ print(europeCurrency)
  
  */
 
+struct MotherBoard {
+    var socet: String = ""
+    var processor: ProcessorType = .amd
+}
 
+var newItem = MotherBoard()
+newItem.socet = "AM3+"
 
-
+print(newItem.socet)
 
 
 /*
