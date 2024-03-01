@@ -373,9 +373,35 @@ filteredItemsByPrice(maxPrice: 4500)
  
  */
 
+func mostExpensiveItem(processor: String) -> [ProductInfo] {
+    let result = [ProductInfo]()
+    switch processor {
+    case "Intel":
+        for index in 0..<cart.count {
+            let targetRate = 10000.00
+            if cart[index].price > targetRate {
+                print("-------Найдорожчий товар за процесором \(processor)-------")
+                print("Назва товару: \(cart[index].productName), Ціна: \(cart[index].price) \(cart[index].currency)")
+            }
+        }
+    case "AMD":
+        for index in 0..<cart.count {
+            let targetRate = 8000.00
+            if cart[index].price > targetRate {
+                print("-------Найдорожчий товар за процесором \(processor)-------")
+                print("Назва товару: \(cart[index].productName), Ціна: \(cart[index].price) \(cart[index].currency)")
+            }
+        }
+    default:
+        break
+        
+    }
+    print("---------------------------------------------")
+    return result
+    
+}
 
-
-
+mostExpensiveItem(processor: "Intel")
 
 /*
  
