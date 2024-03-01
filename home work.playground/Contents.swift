@@ -295,8 +295,18 @@ for index in 0..<cart.count {
  
  */
 
+func onlyIntel() {
+    let target = "Intel"
+    print("--------------\(target)--------------")
+    for index in 0..<cart.count {
+        if cart[index].processor == target {
+            print("\(index+1) Назва товару: \(cart[index].productName)")
+        }
+    }
+    print("---------------------------------")
+}
 
-
+onlyIntel()
 
 /*
  
